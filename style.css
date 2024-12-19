@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Baloo+Tamma+2:wght@400..800&family=Bokor&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    /* --lightColor :  #E0E0E0; */
+
+   --lightColor2 : #D6D6D6;
+
+    --lightColor3: #F4F4F4;
+
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#mainContainer{
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainContainer::before{
+    content: "";
+    height: 80vh;
+    width: 180vw;
+    z-index: -1;
+    position: absolute;
+    background: conic-gradient(transparent 0deg 90deg , gray , transparent 180deg 270deg ,gray);
+    animation: backroundMover 10s linear infinite;
+}
+@keyframes backroundMover{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#container{
+    background-color: var(--lightColor3) ;
+    height: 80vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px;
+    overflow: auto;
+}
+
+
+#mainHeading{
+    align-self: center;
+    font-family: "Baloo 2", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+#inputContainer{
+    margin-top: 20px;
+    display: flex;
+}
+#inputContainer input{
+    height: 30px;
+    padding: 4px 6px;
+    width: 50%;
+    font-size: 18px;
+}
+#inputContainer button{
+    height: 100%;
+    margin: 0px 30px;
+    padding: 2px 5px;
+    font-size: 17px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#inputContainer button:hover{
+    background-color: white;
+    color: black;
+}
+
+
+#additionOfInputContainer{
+    margin-top: 30px;
+   /* background-color: beige; */
+   display: flex;
+   flex-direction: column;
+   row-gap: 20px;
+}
+
+.additionOfInput {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    font-size: 18px;
+    padding: 6px 10px;
+    box-shadow: 2px 2px 6px 4px var(--lightColor2);
+}
+.additionOfInput p{
+    border:  1.5px solid;
+    padding: 2px 5px;
+}
+.additionOfInput button{
+    border: 1px solid;
+    padding: 2px 3px;
+    border-radius: 4px;
+}
+.additionOfInput button:hover{
+    background-color: black;
+    color: rgb(227, 223, 223);
+}
+.additionOfInput .edit{
+    margin-left: 5px;
+}
+
+/*  extra classes for functionality */
